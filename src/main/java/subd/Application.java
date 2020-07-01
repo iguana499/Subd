@@ -72,14 +72,45 @@ public class Application {
     this.getworkersalaryasc();
         this.getCarsCount();
         this.getOrdersToComplete();
-        System.out.println(autoRepairService.getAll(0,7));
-        System.out.println(carsService.getAll(0,7));
-        System.out.println(clientsService.getAll(0,7));
-        System.out.println(componentsInStockService.getAll(0,7));
-        System.out.println(routeService.getAll(0,7));
-        System.out.println(vehicleInspectionService.getAll(0,7));
-        System.out.println(workerService.getAll(0,7));
     }
+    private void readAutoRepair() {
+        for (AutoRepair autoRepair : autoRepairService.getAll(0,7)) {
+            System.out.println(autoRepair);
+        }
+    }
+    private void readCars() {
+        for (Cars cars : carsService.getAll(0,7)) {
+            System.out.println(Cars);
+        }
+    }
+    private void readClients() {
+        for (Clients clients : clientsService.getAll(0, 7)) {
+            System.out.println(Clients);
+        }
+    }
+    private void readComponentsInStock() {
+        for (ComponentsInStock componentsInStock : componentsInStockService.getAll(0, 7)) {
+            System.out.println(componentsInStock);
+        }
+    }
+    private void readRoute() {
+        for (Route route : routeService.getAll(0, 7)) {
+            System.out.println(route);
+        }
+    }
+    private void readVehicleInspection() {
+        for (VehicleInspection vehicleInspection : vehicleInspectionService.getAll(0, 7)) {
+            System.out.println(vehicleInspection);
+        }
+    }
+    private void readWorker() {
+        for (Worker worker : workerService.getAll(0, 7)) {
+            System.out.println(worker);
+        }
+    }
+
+    Worker st = new Worker(null,"Viktor","Viktorov",10,"Driver",15000,null);
+        workerService.addWorker(st);
 
     public void getworkersalaryasc() {
         Timestamp start = new Timestamp(System.currentTimeMillis());
